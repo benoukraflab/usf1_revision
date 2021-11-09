@@ -50,5 +50,4 @@ names(exclusivePeak_result_output) <- exclusive_names
 names(commonPeak_result_output) <- common_names
 
 # example of the plotting process
-plot(density(exclusivePeak_result_output$`exclusivePeaks_MM1_HSA_H1-hESC_USF1`$`MM1_HSA_H1-hESC_USF1_exclusive_peaks`$tag_fold_change))
-points(density(commonPeak_result_output$`commonPeaks_MM1_HSA_H1-hESC_USF1_MM1_HSA_H1-hESC_USF2`$`MM1_HSA_H1-hESC_USF1_common_peaks`$tag_fold_change), type = "l", col = "red")
+boxplot(exclusivePeak_result_output$`exclusivePeaks_MM1_HSA_H1-hESC_USF1`$`MM1_HSA_H1-hESC_USF1_exclusive_peaks`$tag_fold_change, commonPeak_result_output$`commonPeaks_MM1_HSA_H1-hESC_USF1_MM1_HSA_H1-hESC_USF2`$`MM1_HSA_H1-hESC_USF1_common_peaks`$tag_fold_change)
